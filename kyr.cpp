@@ -9,8 +9,6 @@
 #include <cmath>
 #include <numeric>
 
-
-
 struct Tier {
     double threshold;
     double fixedFee;
