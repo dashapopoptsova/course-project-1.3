@@ -1,0 +1,13 @@
+BankName,Direction,Threshold,FixedFee,Percent
+BankA,Input,1000,10,0
+BankA,Input,2000,0,0.015
+BankA,Output,1000,12,0
+BankA,Output,2000,0,0.012
+BankB,Input,1500,15,0
+BankB,Input,3000,0,0.02
+BankB,Output,1500,14,0
+BankB,Output,3000,0,0.018
+BankC,Input,1200,11,0
+BankC,Input,2500,0,0.013
+BankC,Output,1200,13,0
+BankC,Output,2500,0,0.017
