@@ -59,6 +59,7 @@ struct RouteOption {
     int bestSplit = 1;
 };
 
+
 class TransferProblem {
 public:
     std::map<std::string, Bank> banks;
@@ -98,7 +99,6 @@ private:
             std::getline(ss, country, ',');
             std::getline(ss, correspondentsStr);
 
-            // Удаляем кавычки
             name.erase(std::remove(name.begin(), name.end(), '"'), name.end());
             country.erase(std::remove(country.begin(), country.end(), '"'), country.end());
             correspondentsStr.erase(std::remove(correspondentsStr.begin(), correspondentsStr.end(), '"'), correspondentsStr.end());
