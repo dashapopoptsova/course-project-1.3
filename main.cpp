@@ -17,15 +17,15 @@ struct Tier {
 
 struct PiecewiseCommission {
     std::vector<Tier> tiers;
-
     double calculate(double amount) const {
         for (const auto& tier : tiers) {
             if (amount <= tier.threshold) {
-                return tier.fixedFee + amount * tier.percent;
+                return tier.fixedFee;  // только фикс при <= пороге
+            } else {
+                return amount * tier.percent;  // только процент при > пороге
             }
         }
-        const auto& lastTier = tiers.back();
-        return lastTier.fixedFee + amount * lastTier.percent;
+        return 0.0;  //  (если tiers пустой, хотя не должен быть)
     }
 };
 
